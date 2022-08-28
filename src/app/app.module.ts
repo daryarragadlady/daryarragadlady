@@ -3,10 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ChildComponent } from './child/child.component';
+import { NgtemplateexComponent } from './ngtemplateex/ngtemplateex.component';
+import { TestDirective } from './ngtemplateex/test.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ChildComponent,
+    NgtemplateexComponent,
+    TestDirective
   ],
   imports: [
     BrowserModule,

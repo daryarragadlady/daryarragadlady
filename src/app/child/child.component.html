@@ -1,0 +1,43 @@
+
+<div [ngStyle]="{'background-color':'yellow'}">
+
+    <!--class selector-->
+    <ng-content select=".childclassselector">
+   </ng-content>
+
+   <button type="button" (click)="ButtonEvent()">ContentChild</button>
+   <br>
+   <ng-content select=".buttontextclassselector">
+
+   </ng-content>
+
+
+
+
+
+   <!--tag selector-->
+   <div [ngStyle]="{'background-color':'blue'}">
+   <ng-content select="p">
+
+   </ng-content>
+   </div>
+
+   <!--id selector-->
+   <div [ngStyle]="{'background-color':'orange'}">
+    <ng-content select="#myid1">
+ 
+    </ng-content>
+    </div>
+
+
+    <!--attribute selector-->
+    <div [ngStyle]="{'background-color':'pink'}">
+    <ng-content select="[attributeselector]">
+
+
+    </ng-content>
+
+    <button type="button" (click)="ButtonEvent2()">ContentChildren</button>
+    </div>
+</div>
+

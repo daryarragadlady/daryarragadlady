@@ -1,0 +1,31 @@
+
+<ng-container *ngIf="showPrimary; then primary else secondary" [ngStyle]="{'color':'green'}">
+ </ng-container>
+
+    <ng-template #primary>
+       <p>showPrimary </p>
+    </ng-template>
+
+<ng-template #secondary appTest>
+    <p>showSecondary </p>
+</ng-template>
+
+<!--another way to use ngtemplateout
+-->
+
+<ng-container *ngTemplateOutlet="primary"></ng-container>
+
+
+
+<!--another way to use ngtemplate (get reference to ng-container and createEmbedded view in component)-->
+<!--container is accessible after view init-->
+<!--take primary template and attach to #placeholder-->
+<ng-container #placeholder></ng-container>
+
+
+
+<!--another way to use ng-template is using directive-->
+
+<!-- if we directive to template then we will get reference to template-->
+<!--create directive and add reference to #secondary-->
+<ng-container #usingdirective></ng-container>
